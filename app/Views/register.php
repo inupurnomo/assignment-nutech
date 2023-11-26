@@ -2,8 +2,8 @@
 <?= $this->section('content') ?>
 <main>
   <section class="w-full min-h-screen mx-auto flex justify-between gap-2">
-    <div class="w-full flex">
-      <div class="w-1/2 px-20 flex flex-col items-center justify-center text-center my-4">
+    <div class="w-full flex justify-center">
+      <div class="w-[80%] md:w-1/2 px-20 px-20 flex flex-col items-center justify-center text-center my-4">
         <div class="w-full h-full flex flex-col justify-center">
           <div class="px-0 lg:px-8">
             <!-- alert -->
@@ -94,7 +94,7 @@
           </div>
         </div>
       </div>
-      <div class="w-1/2">
+      <div class="hidden md:block md:w-1/2">
         <div class="bg-cover bg-center w-full h-full" style="background-image: url('/img/Illustrasi\ Login.png');">
         </div>
       </div>

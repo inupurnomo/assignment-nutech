@@ -1,6 +1,6 @@
 <header class="overflow-hidden max-w-contentContainer mx-auto flex flex-col md:flex-row px-8 py-8">
-  <div class="w-full h-full flex flex-col md:flex-row items-center justify-center">
-    <div class="w-full h-full md:w-1/3">
+  <div class="w-full h-full flex flex-col md:flex-row items-center justify-center gap-y-4">
+    <div class="w-full h-full md:w-1/3 flex flex-col items-center md:items-start">
       <?php
         $supported_image = array(
           'jpg',
@@ -27,7 +27,7 @@
             <span id="myBalance" data-value="<?= number_format($balance['balance'],2,',','.') ?>">•••••••</span>
           </div>
           <a id="btnBalance" onclick="showBalance()"
-            class="text-xs md:text-sm md:mt-2 lg:mt-3 hover:cursor-pointer show">Lihat
+            class="text-xs md:text-sm mt-2 md:mt-2 lg:mt-3 hover:cursor-pointer show">Lihat
             Saldo</a>
         </div>
       </div>

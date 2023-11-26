@@ -58,7 +58,7 @@
       </div>
       <?php } ?>
     </div>
-    <div class="w-full mx-auto px-8 flex justify-between gap-2 grid grid-cols-6 xl:grid-cols-12">
+    <div class="w-full mx-auto px-8 flex justify-between gap-2 grid grid-cols-3 md:grid-cols-6 xl:grid-cols-12">
       <?php foreach ($services as $s) { ?>
       <div class="flex flex-col items-center">
         <a href="<?= base_url('service/' .$s['service_code']);?>">

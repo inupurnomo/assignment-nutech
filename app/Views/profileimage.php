@@ -28,37 +28,13 @@
       </div>
     </div>
     <div class="flex flex-col items-center">
-      <div class="w-[70%]">
+      <div class="w-[80%] md:w-[70%]">
         <form action="<?= base_url('/profile/image'); ?>" method="POST" enctype="multipart/form-data"
-          class="rounded px-8 pt-6 pb-8 mb-4">
+          class="rounded px-0 md:px-8 pt-6 pb-8 mb-4">
           <div class="mb-6">
             <input type="file" name="profile_image" id="profile_image"
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
           </div>
-          <!-- <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
-              Email
-            </label>
-            <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="email" name="email" type="email" placeholder="email@email.com" value="<?= $user['email']; ?>">
-          </div>
-          <div class=" mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="first_name">
-              Nama Depan
-            </label>
-            <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="first_name" name="first_name" type="text" placeholder="First" value="<?= $user['first_name']; ?>">
-          </div>
-          <div class=" mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="last_name">
-              Nama Belakang
-            </label>
-            <input
-              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="last_name" name="last_name" type="text" placeholder="Last" value="<?= $user['last_name']; ?>">
-          </div> -->
           <div class="flex flex-col gap-6 text-center">
             <button
               class="w-full border border-red-600 bg-red-600 text-white hover:bg-red-800 hover:text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline duration-300"

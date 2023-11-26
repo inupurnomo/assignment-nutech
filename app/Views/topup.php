@@ -61,8 +61,8 @@
       </div>
       <?php } ?>
 
-      <div class="mt-6 flex py-2 gap-4">
-        <div class="w-3/5">
+      <div class="mt-6 flex flex-col-reverse md:flex-row py-2 gap-4">
+        <div class="w-full md:w-3/5">
           <div class="w-full">
             <form action="<?= base_url('topupAction') ?>" method="POST" class="flex flex-col">
               <input id="top_up_amount" onchange="checkValue()" name="top_up_amount" type="number"
@@ -77,8 +77,8 @@
             </form>
           </div>
         </div>
-        <div class="w-2/5 flex flex-col gap-y-3">
-          <div class="w-full flex gap-1.5">
+        <div class="w-full md:w-2/5 flex flex-col gap-y-3">
+          <div class="w-full flex items-center justify-around md:justify-start gap-1.5">
             <button id="btn1" type="button" onclick="addBalance(10000)"
               class=" border rounded-sm w-24 py-2 hover:bg-gray-200"">Rp10.000</button>
             <button id=" btn2" type="button" onclick="addBalance(20000)"
@@ -86,7 +86,7 @@
             <button id="btn3" type="button" onclick="addBalance(50000)"
               class="border rounded-sm w-24 py-2 hover:bg-gray-200 duration-300">Rp50.000</button>
           </div>
-          <div class="w-full flex gap-1.5">
+          <div class="w-full flex  items-center justify-around md:justify-start gap-1.5">
             <button id="btn4" type="button" onclick="addBalance(100000)"
               class="border rounded-sm w-24 py-2 hover:bg-gray-100 duration-300">Rp100.000</button>
             <button id="btn5" type="button" onclick="addBalance(250000)"

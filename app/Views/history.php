@@ -51,6 +51,7 @@
 let offset = 6;
 
 async function loadMore() {
+  const secret = <?= $token ?>;
   var url =
     "https://take-home-test-api.nutech-integrasi.app/transaction/history?offset=" +
     offset +
@@ -60,8 +61,7 @@ async function loadMore() {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer " +
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpZ2dlckBkaWdnZXIuY29tIiwibWVtYmVyQ29kZSI6IkxQRFpHOEs0IiwiaWF0IjoxNzAwOTk2MTA5LCJleHAiOjE3MDEwMzkzMDl9.HwQhjWsgpPZ34i37Xp_V-woRpNm3L4rJ2ixPtEoy_SY",
+      Authorization: "Bearer ${secret}",
     },
   });
   offset = offset + 5;

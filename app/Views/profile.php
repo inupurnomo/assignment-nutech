@@ -32,8 +32,8 @@
       </div>
     </div>
     <div class="flex flex-col items-center">
-      <div class="w-[70%]">
-        <div class="px-8">
+      <div class="w-[80%] md:w-[70%]">
+        <div class="px-0 md:px-8">
           <!-- alert -->
           <?php if ($session->getFlashdata('success')) { ?>
           <div id=" alert-3"
@@ -86,8 +86,7 @@
           </div>
           <?php } ?>
         </div>
-        <form class="rounded px-8 pt-6 pb-8 mb-4">
-
+        <form class="rounded px-0 md:px-8 pt-6 pb-8 mb-4">
           <div class="mb-6">
             <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
               Email
@@ -96,7 +95,7 @@
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="email" type="email" placeholder="email@email.com" value="<?= $user['email']; ?>" disabled>
           </div>
-          <div class=" mb-6">
+          <div class="mb-6">
             <label class="block text-gray-700 text-sm font-bold mb-2" for="first_name">
               Nama Depan
             </label>
@@ -104,7 +103,7 @@
               class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="first_name" type="text" placeholder="First" value="<?= $user['first_name']; ?>" disabled>
           </div>
-          <div class=" mb-6">
+          <div class="mb-6">
             <label class="block text-gray-700 text-sm font-bold mb-2" for="last_name">
               Nama Belakang
             </label>

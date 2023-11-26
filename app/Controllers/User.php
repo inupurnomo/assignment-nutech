@@ -8,10 +8,15 @@ use Faker\Extension\Helper;
 class User extends BaseController
 {
   
-  public function profile(): string
+  public function profile()
   {
     $session = session();
     $token = $token = $session->get('user');
+
+    if (!$session->get('user')){
+      $session->setFlashdata('error', 'Login terlebih dahulu!');
+      return redirect()->route('login');
+    }
     
     // get user
     $user = API::fetchApi('GET', '/profile', [], $token);
@@ -20,10 +25,15 @@ class User extends BaseController
     return view('profile', ['session' => $session, 'user' => $user]);
   }
   
-  public function editProfile(): string
+  public function editProfile()
   {
     $session = session();
     $token = $session->get('user');
+
+    if (!$session->get('user')){
+      $session->setFlashdata('error', 'Login terlebih dahulu!');
+      return redirect()->route('login');
+    }
 
     // profile
     $user = API::fetchApi('GET', '/profile', [], $token);
@@ -63,6 +73,11 @@ class User extends BaseController
     $session = session();
     $token = $session->get('user');
 
+    if (!$session->get('user')){
+      $session->setFlashdata('error', 'Login terlebih dahulu!');
+      return redirect()->route('login');
+    }
+
     // get user
     $user = API::fetchApi('GET', '/profile', [], $token);
     $user = $user['data'];
@@ -74,6 +89,11 @@ class User extends BaseController
   {
     $session = session();
     $token = $session->get('user');
+
+    if (!$session->get('user')){
+      $session->setFlashdata('error', 'Login terlebih dahulu!');
+      return redirect()->route('login');
+    }
 
     $file = $this->request->getFile('profile_image');
     

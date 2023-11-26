@@ -35,10 +35,15 @@ class Home extends BaseController
     return view('dashboard', ['session' => $session, 'user' => $user, 'balance' => $balance, 'services' => $services, 'banner' => $banner]);
   }
   
-  public function topup(): string
+  public function topup()
   {
     $session = session();
     $token = $session->get('user');
+
+    if (!$session->get('user')){
+      $session->setFlashdata('error', 'Login terlebih dahulu!');
+      return redirect()->route('login');
+    }
     
     // get user
     $user = API::fetchApi('GET', '/profile', [], $token);
@@ -101,10 +106,15 @@ class Home extends BaseController
     }
   }
 
-  public function service($s): string
+  public function service($s)
   {
     $session = session();
     $token = $session->get('user');
+    
+    if (!$session->get('user')){
+      $session->setFlashdata('error', 'Login terlebih dahulu!');
+      return redirect()->route('login');
+    }
     
     // get user
     $user = API::fetchApi('GET', '/profile', [], $token);
@@ -159,10 +169,15 @@ class Home extends BaseController
     }
   }
 
-  public function history(): string
+  public function history()
   {
     $session = session();
     $token = $session->get('user');
+
+    if (!$session->get('user')){
+      $session->setFlashdata('error', 'Login terlebih dahulu!');
+      return redirect()->route('login');
+    }
 
     // get user
     $user = API::fetchApi('GET', '/profile', [], $token);
