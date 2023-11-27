@@ -51,7 +51,6 @@
 let offset = 6;
 
 async function loadMore() {
-  const secret = <?= $token ?>;
   var url =
     "https://take-home-test-api.nutech-integrasi.app/transaction/history?offset=" +
     offset +
@@ -61,7 +60,7 @@ async function loadMore() {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer ${secret}",
+      Authorization: "Bearer " + `<?= $token ?>`,
     },
   });
   offset = offset + 5;
